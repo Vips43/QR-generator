@@ -1,5 +1,16 @@
+const input = document.querySelector('input'),
+btn = document.querySelector('.btn'),
+main = document.querySelector('.main'),
+qrImg = document.querySelector('.qr-img')
+console.log(input,btn);
 
-
+btn.onclick = () =>{
+    let qrValue = input.value;
+    qrImg.classList.toggle("active")
+    main.classList.toggle("active")
+    console.log(qrValue);
+    
+}
 
 
 

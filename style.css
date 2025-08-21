@@ -11,11 +11,11 @@ body{
     background-color: aquamarine;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 .main{
     width: 300px;
-    height: 400px;
+    height: 180px;
     padding: 1rem;
     background-color: #ECEEDF;
     border-radius: 10px;
@@ -23,6 +23,10 @@ body{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    transition: all .5s ease;
+}
+.main.active{
+    height: 400px;
 }
 .wrapper{
     width: 100%;
@@ -51,4 +55,16 @@ body{
 .body > button{
     background-color: aquamarine;
     cursor: pointer;
+}
+.qr-img{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    transform: scale(0);
+    visibility: hidden;
+    transition: all .1s linear;
+}
+.qr-img.active{
+    visibility: visible;
+    transform: scale(1);
 }
