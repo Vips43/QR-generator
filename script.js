@@ -4,10 +4,13 @@ main = document.querySelector('.main'),
 qrImg = document.querySelector('.qr-img')
 console.log(input,btn);
 
-btn.onclick = () =>{
-    let qrValue = input.value;
-    qrImg.classList.toggle("active")
-    main.classList.toggle("active")
+btn.onclick = (e) =>{
+    let qrValue = input.value.trim();
+    if (qrValue == '') {
+        return
+    }
+    qrImg.classList.add("active")
+    main.classList.add("active")
     console.log(qrValue);
     
 }

@@ -55,6 +55,10 @@ body{
 .body > button{
     background-color: aquamarine;
     cursor: pointer;
+    transition: all .3s ease;
+}
+.body > button:hover{
+    background-color: rgb(113, 226, 188);
 }
 .qr-img{
     border: 1px solid black;
