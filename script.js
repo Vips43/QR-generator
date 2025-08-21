@@ -1,7 +1,7 @@
 const input = document.querySelector('input'),
 btn = document.querySelector('.btn'),
 main = document.querySelector('.main'),
-qrImg = document.querySelector('.qr-img')
+qrImg = document.querySelector('.qr-img img')
 console.log(input,btn);
 
 btn.onclick = (e) =>{
@@ -12,14 +12,16 @@ btn.onclick = (e) =>{
     qrImg.classList.add("active")
     main.classList.add("active")
     console.log(qrValue);
-    
+    e.target.textContent = 'Generating Qr code...'
+
+    async function getQrData() {
+        const getData = await fetch(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrValue}`)
+
+        qrImg.src = getData
+    }
 }
 
 
 
 
 
-
-async function getQrData() {
-    const getData = await fetch(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example`)
-}

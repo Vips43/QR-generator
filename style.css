@@ -60,15 +60,14 @@ body{
 .body > button:hover{
     background-color: rgb(113, 226, 188);
 }
-.qr-img{
-    border: 1px solid black;
+.qr-img img{
     width: 150px;
     height: 150px;
     transform: scale(0);
     visibility: hidden;
     transition: all .1s linear;
 }
-.qr-img.active{
+.qr-img img.active{
     visibility: visible;
     transform: scale(1);
 }
