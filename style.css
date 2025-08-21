@@ -23,7 +23,7 @@ body{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    transition: all .5s ease-in-out;
+    transition: all .5s ease;
 }
 .main.active{
     height: 400px;
@@ -52,16 +52,7 @@ body{
 .body input{
     padding: 0 1rem;
 }
-.body>div{
-    display: flex;
-    gap: 10px;
-}
-.body >div> button{
-    border-radius: 10px;
-    height: 40px;
-    flex-grow: 1;
-    outline: none;
-    border: none;
+.body > button{
     background-color: aquamarine;
     cursor: pointer;
     transition: all .3s ease;
